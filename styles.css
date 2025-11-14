@@ -1,0 +1,158 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Tipografía y fondo general */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f9f9f9;
+    color: #333;
+}
+
+/* Header y menú */
+header {
+    background-color: #000000; /* verde bonito */
+    color: white;
+    padding: 15px 0;
+    top: 0;
+    width: 100%;
+    position: sticky; /* El menú se queda pegado en la parte superior mientras se hace scroll dentro de su contenedor */
+    z-index: 1000; /* Se asegura de que quede encima del contenido */
+    box-shadow: 5px 6px 10px rgb(218, 0, 0);
+}
+
+.menu ul{
+    list-style: none;
+    padding: 0;
+    justify-content: center;
+    display: flex;
+    gap: 30px; /*DEJA ESPACIO*/
+}
+
+.menu ul li a{
+    color: white; /*color de las letras del menu*/
+    text-decoration: none;
+    padding: 15px 20px;
+    display: block; /*Permite que el área del enlace sea clickeable en toda su zona (no solo el texto).*/
+}
+a:hover{
+    background-color: grey; /*color de fondo al pasar el mouse*/
+    transition: 0.5s;
+}
+.menu h2{
+    font-size: 2rem;
+    text-align: left;
+}
+
+/* Secciones */
+.secciones {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Títulos */
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+h2 {
+    margin-bottom: 10px;
+    color: #0634ff;
+}
+
+/* Formulario sencillo */
+.contacto-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contacto-form button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+    transition: background-color 0.3s;
+}
+
+.contacto-form button:hover {
+    background-color: #2196F3; /* azul al hover */
+}
+
+/* Contenedor de perfil */
+.perfil {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Imagen de perfil */
+.perfil img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover; /*para que ls imagen no se distorcione*/
+    border-radius: 50%; /* circular */
+    border: 3px solid #4CAF50;
+}
+
+/* Texto al lado de la imagen */
+.perfil p {
+    font-size: 1.1rem;
+    max-width: 600px;
+}
+/* Proyectos */
+.proyectos {
+    background: #f0f0f0;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.proyectos:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.proyectos-contenedor {
+    display: flex;
+    justify-content: center; 
+    gap: 20px; 
+}
+
+.proyectos {
+    background: #f1f1f1;
+    width: 250px;     /* IMPORTANTE: que quepan las 3 */
+    padding: 20px;
+    border-radius: 10px;
+}
+#proyectos2 img {
+    width: 100%;
+    max-width: 250px;
+    margin-top: 10px;
+    border-radius: 10px;
+    display: block;
+}
+
+footer {
+    background-color: #000000;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 50px;
+
+    /* Sombra roja intensa en la parte superior */
+    box-shadow: 0 -5px 10px rgba(255, 0, 0, 0.8);
+}
+
