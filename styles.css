@@ -1,63 +1,122 @@
-/* Reset básico */
+/* ============================
+   VARIABLES CSS
+============================ */
+:root{
+    --fondo-principal: url("gk1.jpg");
+    --color-texto-menu: rgb(0,0,0);
+    --color-fondo-seccion: rgb(253,240,240);
+    --color-letra-principal: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --color-footer: #000000;
+    --color-footer-hover: #c02b2b;
+}
+
+/* ============================
+   RESET BÁSICO
+============================ */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Tipografía y fondo general */
+/* ============================
+   BODY
+============================ */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: #f9f9f9;
+    background-image: var(--fondo-principal);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+
+    font-family: var(--color-letra-principal);
     color: #333;
 }
 
-/* Header y menú */
+/* ============================
+   HEADER Y MENÚ
+============================ */
 header {
-    background-color: #000000; /* verde bonito */
+    background-color: var(--color-texto-menu);
     color: white;
     padding: 15px 0;
     top: 0;
     width: 100%;
-    position: sticky; /* El menú se queda pegado en la parte superior mientras se hace scroll dentro de su contenedor */
-    z-index: 1000; /* Se asegura de que quede encima del contenido */
+    position: sticky;
+    z-index: 1000;
     box-shadow: 5px 6px 10px rgb(218, 0, 0);
 }
 
-.menu ul{
-    list-style: none;
-    padding: 0;
-    justify-content: center;
+.menu {
     display: flex;
-    gap: 30px; /*DEJA ESPACIO*/
+    justify-content: space-between;
+    align-items: center;
+    max-width: 900px;
+    margin: auto;
+    padding: 0 20px;
 }
 
-.menu ul li a{
-    color: white; /*color de las letras del menu*/
+.menu h2 {
+    font-size: 2rem;
+    color: white;
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.menu ul li a {
+    color: white;
     text-decoration: none;
     padding: 15px 20px;
-    display: block; /*Permite que el área del enlace sea clickeable en toda su zona (no solo el texto).*/
-}
-a:hover{
-    background-color: grey; /*color de fondo al pasar el mouse*/
-    transition: 0.5s;
-}
-.menu h2{
-    font-size: 2rem;
-    text-align: left;
+    display: block;
+    transition: 0.3s;
 }
 
-/* Secciones */
+.menu ul li a:hover {
+    background-color: grey;
+}
+
+/* ============================
+   HAMBURGUESA
+============================ */
+#menu-toggle {
+    display: none;
+}
+
+.hamburguesa {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+    z-index: 1100;
+}
+
+.hamburguesa span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+/* ============================
+   SECCIONES
+============================ */
 .secciones {
     max-width: 900px;
     margin: 50px auto;
     padding: 20px;
-    background: white;
+    background: var(--color-fondo-seccion);
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
-/* Títulos */
 h1 {
     text-align: center;
     margin-bottom: 20px;
@@ -69,7 +128,55 @@ h2 {
     color: #0634ff;
 }
 
-/* Formulario sencillo */
+/* PERFIL */
+.perfil {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.perfil img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #4CAF50;
+}
+
+.perfil p {
+    font-size: 1.1rem;
+    max-width: 600px;
+}
+
+/* PROYECTOS */
+.proyectos-contenedor {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.proyectos {
+    background: #f1f1f1;
+    width: 250px;
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.proyectos:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.proyectos img {
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+/* FORMULARIO */
 .contacto-form {
     display: flex;
     flex-direction: column;
@@ -86,72 +193,56 @@ h2 {
 }
 
 .contacto-form button:hover {
-    background-color: #2196F3; /* azul al hover */
-}
-/* Contenedor de perfil */
-.perfil {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    flex-wrap: wrap;
+    background-color: #2196F3;
 }
 
-/* Imagen de perfil */
-.perfil img {
-    width: 150px;
-    height: 150px;
-    object-fit: cover; /*para que ls imagen no se distorcione*/
-    border-radius: 50%; /* circular */
-    border: 3px solid #4CAF50;
-}
-
-/* Texto al lado de la imagen */
-.perfil p {
-    font-size: 1.1rem;
-    max-width: 600px;
-}
-/* Proyectos */
-.proyectos {
-    background: #f0f0f0;
-    padding: 15px;
-    margin: 10px 0;
-    border-radius: 8px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.proyectos:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-}
-
-.proyectos-contenedor {
-    display: flex;
-    justify-content: center; 
-    gap: 20px; 
-}
-
-.proyectos {
-    background: #f1f1f1;
-    width: 250px;     /* IMPORTANTE: que quepan las 3 */
-    padding: 20px;
-    border-radius: 10px;
-}
-#proyectos2 img {
-    width: 100%;
-    max-width: 250px;
-    margin-top: 10px;
-    border-radius: 10px;
-    display: block;
-}
-
+/* FOOTER */
 footer {
-    background-color: #000000;
+    background-color: var(--color-footer);
     color: white;
     text-align: center;
-    padding: 15px 0;
+    padding: 3rem;
     margin-top: 50px;
-
-    /* Sombra roja intensa en la parte superior */
     box-shadow: 0 -5px 10px rgba(255, 0, 0, 0.8);
 }
 
+footer:hover {
+    background-color: var(--color-footer-hover);
+}
+
+/* ============================
+   MEDIA QUERIES RESPONSIVE
+============================ */
+@media (max-width: 767px) {
+    .menu {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .hamburguesa {
+        display: flex;
+    }
+
+    .menu ul {
+        flex-direction: column;
+        gap: 10px;
+        display: none;
+        width: 100%;
+        background-color: var(--color-texto-menu);
+        border-radius: 5px;
+        margin-top: 10px;
+    }
+
+    #menu-toggle:checked + .hamburguesa + ul {
+        display: flex;
+    }
+
+    .menu h2 {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+    }
+
+    .menu ul li a {
+        padding: 10px 0;
+    }
+}

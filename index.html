@@ -1,19 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi Portafolio</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
 
     <!-- ===========================
-          HEADER Y MENÚ PRINCIPAL
+         HEADER Y MENÚ PRINCIPAL
     ============================ -->
     <header>
         <nav class="menu">
+            <h2>Miguel Angel Lezcano</h2>
+
+            <!-- Checkbox escondido para hamburguesa -->
+            <input type="checkbox" id="menu-toggle" />
+            <label for="menu-toggle" class="hamburguesa">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+
             <ul>
                 <li><a href="#acerca-de-mi">Acerca de mi</a></li>
                 <li><a href="#mis-proyectos">Mis proyectos</a></li>
@@ -24,84 +33,72 @@
     </header>
 
     <main>
-
-
         <!-- SECCIÓN: ACERCA DE MI -->
-<section class="secciones" id="acerca-de-mi">
-    <h1>Acerca de mi</h1>
-    <div class="perfil">
-        <img src="ney.png" alt="Foto de Miguel Lezcano">
-        <p>Hola, mi nombre es Miguel Lezcano y me gusta ser persistente y lograr mis objetivos.</p>
-    </div>
-</section>
-
+        <section class="secciones" id="acerca-de-mi">
+            <h1>Acerca de mi</h1>
+            <div class="perfil">
+                <img src="ney.png" alt="Foto de Miguel Lezcano">
+                <p>Hola, mi nombre es Miguel Lezcano y me gusta ser persistente y lograr mis objetivos.</p>
+            </div>
+        </section>
 
         <!-- SECCIÓN: MIS PROYECTOS -->
-<section class="secciones" id="mis-proyectos">
-    <h1>Mis proyectos</h1>
+        <section class="secciones" id="mis-proyectos">
+            <h1>Mis proyectos</h1>
+            <div class="proyectos-contenedor">
+                <article class="proyectos">
+                    <h2>Impulso Tec</h2>
+                    <p>Página que ayudará a desarrolladores sin experiencia.</p>
+                    <img src="impulso.png" alt="Proyecto Impulso Tec">
+                </article>
 
-    <div class="proyectos-contenedor">
-
-        <article id="proyectos2" class="proyectos" >
-            <h2>Impulso Tec</h2>
-            <p>Página que ayudará a desarrolladores sin experiencia.</p>
-            <img src="impulso.png" alt="Proyecto Impulso Tec">
-        </article>
-
-        <article id="proyectos2" class="proyectos">
-            <h2>Deleite</h2>
-            <p>Página virtual de panadería y repostería.</p>
-            <img src="deleite.png" alt="Proyecto Deleite">
-        </article>
-
-    </div>
-</section>
-
+                <article class="proyectos">
+                    <h2>Deleite</h2>
+                    <p>Página virtual de panadería y repostería.</p>
+                    <img src="deleite.png" alt="Proyecto Deleite">
+                </article>
+            </div>
+        </section>
 
         <!-- SECCIÓN: TEMAS DE INTERÉS -->
-<section class="secciones" id="temas-de-interes">
-    <h1>Temas de interés</h1>
+        <section class="secciones" id="temas-de-interes">
+            <h1>Temas de interés</h1>
+            <div class="proyectos-contenedor">
+                <article class="proyectos">
+                    <p>JavaScript</p>
+                    <img src="js.png" alt="JavaScript">
+                    <p>Lenguaje de programación para web.</p>
+                </article>
 
-    <div class="proyectos-contenedor">
+                <article class="proyectos">
+                    <p>HTML</p>
+                    <img src="html.png" alt="HTML">
+                    <p>Estructura principal de una página web.</p>
+                </article>
 
-        <article class="proyectos">
-            <p>JavaScript</p>
-            <img src="js.png" alt="JavaScript">
-            <p>Lenguaje de programación para web.</p>
-        </article>
-
-        <article class="proyectos">
-            <p>HTML</p>
-            <img src="html.png" alt="HTML">
-            <p>Estructura principal de una página web.</p>
-        </article>
-
-        <article class="proyectos">
-            <p>CSS</p>
-            <img src="css.png" alt="CSS">
-            <p>Diseño y estilos visuales para la web.</p>
-        </article>
-
-    </div>
-</section>
-
+                <article class="proyectos">
+                    <p>CSS</p>
+                    <img src="css.png" alt="CSS">
+                    <p>Diseño y estilos visuales para la web.</p>
+                </article>
+            </div>
+        </section>
 
         <!-- SECCIÓN: CONTACTO -->
-<section class="secciones" id="contacto">
-    <h1>Contacto</h1>
-    <form class="contacto-form">
-        <input type="text" placeholder="Nombre" required>
-        <input type="email" placeholder="Correo" required>
-        <textarea placeholder="Mensaje" rows="4" required></textarea>
-        <button type="submit">Enviar</button>
-    </form>
-</section>
+        <section class="secciones" id="contacto">
+            <h1>Contacto</h1>
+            <form class="contacto-form">
+                <input type="text" placeholder="Nombre" required>
+                <input type="email" placeholder="Correo" required>
+                <textarea placeholder="Mensaje" rows="4" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
 
-</main>
-
-<footer>
-    <p>&copy; 2025 Miguel Lezcano. Todos los derechos reservados.</p>
-</footer>
+    <footer>
+        <p>&copy; 2025 Miguel Lezcano. Todos los derechos reservados.</p>
+    </footer>
 
 </body>
 </html>
