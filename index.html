@@ -34,7 +34,7 @@
 
     <main>
         <!-- SECCIÓN: ACERCA DE MI -->
-        <section class="secciones">
+        <section class="secciones" id="acerca-de-mi">
             <h1>Acerca de mi</h1>
             <div class="perfil">
                 <img src="lezca.png" alt="Foto de Miguel Lezcano">
@@ -88,9 +88,14 @@
         <section class="secciones" id="contacto">
             <h1>Contacto</h1>
             <form class="contacto-form">
-                <input type="text" placeholder="Nombre" required>
-                <input type="email" placeholder="Correo" required>
-                <textarea placeholder="Mensaje" rows="4" required></textarea>
+                <label for="nombre">Nombre</label>
+                <input type="text" placeholder="Ingresa tu nombre" required>
+
+                <label for="email">Email</label>
+                <input type="email" placeholder="Ingresa tu correo" required>
+
+                <label for="mensaje">Mensaje</label>
+                <textarea placeholder="escribe el mensaje que deseas enviar" rows="4" required></textarea>
                 <button type="submit">Enviar</button>
             </form>
         </section>

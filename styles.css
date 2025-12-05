@@ -121,7 +121,9 @@ nav ul li a {
     background: var(--color-fondo-seccion); /* Fondo definido arriba */
     border-radius: 10px; /* Bordes redondeados */
     box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombra suave */
+    scroll-margin-top: 14rem; /* Ajusta según la altura de tu header en diseño móvil y desktop */
 }
+
 
 h1 {
     text-align: center; /* Título centrado */
@@ -155,6 +157,7 @@ h2 {
     max-width: 600px; /* Máximo ancho */
 }
 
+
 /* PROYECTOS */
 .proyectos-contenedor {
     display: flex; /* Tarjetas en fila */
@@ -183,6 +186,7 @@ h2 {
     width: 100%; /* Imagen ocupa todo el ancho */
     border-radius: 10px; /* Bordes redondeados */
     margin-top: 10px; /* Separación arriba */
+}
 }
 
 /* FORMULARIO */
@@ -258,17 +262,7 @@ footer:hover {
     }
 }
 
-/* ============================
-   FONDO RESPONSIVE REAL
-============================ */
-@media (max-width: 768px) {
 
-    body {
-        background-attachment: scroll; /* Evita bugs en móviles */
-        background-size: cover; /* Mantiene proporción */
-        background-position: center; /* Centrado */
-    }
-}
 
 /* Para pantallas muy pequeñas */
 @media (max-width: 480px) {
